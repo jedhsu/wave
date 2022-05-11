@@ -12,6 +12,7 @@ networkx = "^2.6.2"
 av = "^8.0.3"
 sympy = "^1.8"
 sounddevice = "^0.4.2"
+acoustics = "^0.2.4"
 
 
 [tool.poetry.dev-dependencies]

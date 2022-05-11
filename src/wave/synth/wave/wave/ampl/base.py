@@ -13,7 +13,9 @@ __all__ = ["Ampl"]
 # wrappers of immutable floats
 
 
-class Ampl(metaclass=ABCMeta):
+class Ampl(
+    metaclass=ABCMeta,
+):
     Amplitude = TypeVar("Amplitude")
     Decibel = TypeVar("Decibel")
     Power = TypeVar("Power")
@@ -27,16 +29,34 @@ Four forms of amplitude subclass base type and wrap immutable float.
 """
 
 
-class Amplitude(Ampl, float):
-    def __init__(self, value):
+class Amplitude(
+    Ampl,
+    float,
+):
+    def __init__(
+        self,
+        value,
+    ):
         """Wraps immutable float."""
-        super(Amplitude, self).__new__(float, value)
+        super(Amplitude, self).__new__(
+            float,
+            value,
+        )
 
 
-class Decibel(Ampl, float):
-    def __init__(self, value):
+class Decibel(
+    Ampl,
+    float,
+):
+    def __init__(
+        self,
+        value,
+    ):
         """Wraps immutable float."""
-        super(Decibel, self).__new__(float, value)
+        super(Decibel, self).__new__(
+            float,
+            value,
+        )
 
 
 class Power(Ampl, float):
